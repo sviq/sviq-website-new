@@ -89,13 +89,13 @@ const Navbar = () => {
           </div>
 
           {/* Estimate button */}
-          <div className=" hidden lg:flex">
+          {/* <div className=" hidden lg:flex">
             <button
               className={`${fonts.inter} font-medium text-lg border border-white bg-white text-primary hover:bg-primary hover:text-white py-2 px-4 rounded transition-colors duration-300 ease-in-out`}
             >
               Estimate your project
             </button>
-          </div>
+          </div> */}
 
           {/* Mobile menu (slide in from right) */}
           <AnimatePresence>

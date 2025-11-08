@@ -40,6 +40,8 @@ export const ContactForm = () => {
         method: "POST",
         body: formData,
       });
+      console.log(response);
+
       if (response.ok) {
         toast.success("Form submitted successfully!", { id: toastId });
         reset();
@@ -51,6 +53,17 @@ export const ContactForm = () => {
       toast.error("Failed to submit form.", { id: toastId });
     }
   };
+
+  const socialLinks = [
+    {
+      name: "Linkedin",
+      href: "https://www.linkedin.com/company/sviq/",
+    },
+    {
+      name: "Instagram",
+      href: "https://www.instagram.com/sviqofficial/?igsh=MWI1MG5nM3B3ZW5vdg%3D%3D#",
+    },
+  ];
 
   return (
     <section className="flex justify-center items-center py-10 md:py-14 lg:py-20">
@@ -144,7 +157,7 @@ export const ContactForm = () => {
               },
               {
                 title: "Working Hour",
-                content: `Monday To Friday\n9:00 AM to 8:00 PM`,
+                content: `Monday To Friday\n9:30 AM to 6:30 PM`,
               },
               {
                 title: "Contact Us",
@@ -178,24 +191,24 @@ export const ContactForm = () => {
               transition={{ duration: 0.5, delay: 0.6 }}
             >
               <div className="flex space-x-6">
-                {["Facebook", "Instagram", "Linkedin", "Twitter"].map(
-                  (platform, index) => (
-                    <motion.a
-                      key={platform}
-                      href="#"
-                      className="relative size-8 sm:size-6"
-                      initial={{ opacity: 0, scale: 0.8 }}
-                      animate={{ opacity: 1, scale: 1 }}
-                      transition={{ duration: 0.4, delay: 0.7 + index * 0.1 }}
-                    >
-                      <img
-                        alt={platform}
-                        src={`/images/${platform}Logo.svg`}
-                        className="h-full w-full object-contain"
-                      />
-                    </motion.a>
-                  )
-                )}
+                {socialLinks.map((platform, index) => (
+                  <motion.a
+                    key={platform.name}
+                    href={platform.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="relative size-8 sm:size-6"
+                    initial={{ opacity: 0, scale: 0.8 }}
+                    animate={{ opacity: 1, scale: 1 }}
+                    transition={{ duration: 0.4, delay: 0.7 + index * 0.1 }}
+                  >
+                    <img
+                      alt={platform.name}
+                      src={`/images/${platform.name}Logo.svg`}
+                      className="h-full w-full object-contain"
+                    />
+                  </motion.a>
+                ))}
               </div>
             </motion.div>
           </motion.div>

@@ -34,40 +34,40 @@ const CultureCard: FC<CultureCardProps> = ({ emoji, title, description }) => {
 const Culture = () => {
   const culture = [
     {
-      emoji: "😷",
-      title: "Covid-19 insurance",
-      description:
-        "Through True Rich Attended does no end it his mother since real had halfdoes no end it",
-    },
-    {
       emoji: "⏱",
       title: "Flexible working time",
       description:
-        "Through True Rich Attended does no end it his mother since real had halfdoes no end it",
+        "Set your own hours and work where you are most productive while staying aligned on outcomes.",
     },
     {
       emoji: "🏡",
-      title: "Work from home",
+      title: "Remote-friendly team",
       description:
-        "Through True Rich Attended does no end it his mother since real had halfdoes no end it",
+        "Collaborate async-first with teammates spread across time zones and stay connected through daily standups.",
     },
     {
       emoji: "🎉",
-      title: "Annual retreats",
+      title: "Quarterly offsites",
       description:
-        "Through True Rich Attended does no end it his mother since real had halfdoes no end it",
+        "Gather in person several times a year to plan the roadmap, align priorities, and celebrate milestones together.",
     },
     {
-      emoji: "💰",
+      emoji: "🚀",
+      title: "Startup pace",
+      description:
+        "Own big problems end-to-end, ship to customers weekly, and learn faster than you thought possible.",
+    },
+    {
+      emoji: "💡",
       title: "Learning stipend",
       description:
-        "Through True Rich Attended does no end it his mother since real had halfdoes no end it",
+        "Access a dedicated budget for books, courses, and conferences that keep your skills sharp.",
     },
     {
-      emoji: "💪",
-      title: "Gym membership",
+      emoji: "🤝",
+      title: "Direct mentorship",
       description:
-        "Through True Rich Attended does no end it his mother since real had halfdoes no end it",
+        "Partner closely with the founding team, get feedback quickly, and help shape how we build and work together.",
     },
   ];
 

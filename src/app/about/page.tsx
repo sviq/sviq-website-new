@@ -32,7 +32,7 @@ export default function About() {
       <Story />
       <Expertise />
       <Vision />
-      <Team />
+      {/* <Team /> */}
     </main>
   );
 }

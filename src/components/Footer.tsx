@@ -136,23 +136,13 @@ export const Footer = () => {
           {/* Right Section */}
           <div className="flex justify-start">
             <div className="flex space-x-6">
-              <Link href={"#"} className="relative size-8 sm:size-6">
-                <Image
-                  fill
-                  alt="Facebook"
-                  src={"/images/FacebookLogo.svg"}
-                  className="object-contain"
-                />
-              </Link>
-              <Link href={"#"} className="relative size-8 sm:size-6">
-                <Image
-                  fill
-                  alt="Instagram"
-                  src={"/images/InstagramLogo.svg"}
-                  className="object-contain"
-                />
-              </Link>
-              <Link href={"#"} className="relative size-8 sm:size-6">
+              {" "}
+              <Link
+                href={"https://www.linkedin.com/company/sviq/"}
+                className="relative size-8 sm:size-6"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <Image
                   fill
                   alt="Linkedin"
@@ -160,11 +150,18 @@ export const Footer = () => {
                   className="object-contain"
                 />
               </Link>
-              <Link href={"#"} className="relative size-8 sm:size-6">
+              <Link
+                href={
+                  "https://www.instagram.com/sviqofficial/?igsh=MWI1MG5nM3B3ZW5vdg%3D%3D#"
+                }
+                className="relative size-8 sm:size-6"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <Image
                   fill
-                  alt="Facebook"
-                  src={"/images/TwitterLogo.svg"}
+                  alt="Instagram"
+                  src={"/images/InstagramLogo.svg"}
                   className="object-contain"
                 />
               </Link>
@@ -188,7 +185,7 @@ export const Footer = () => {
               © {year} {siteConfig.name.toUpperCase()}. All rights reserved
             </p>
             {/* Developed By Agnes */}
-            <div>
+            {/* <div>
               <p
                 className={`${fonts.inter} flex justify-center items-center space-x-2 text-white text-sm`}
               >
@@ -204,7 +201,7 @@ export const Footer = () => {
                   />
                 </a>
               </p>
-            </div>
+            </div> */}
           </div>
         </div>
       </Container>
