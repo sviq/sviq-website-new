@@ -85,7 +85,7 @@ export const Footer = () => {
                 className={`${fonts.inter} text-white space-y-6 text-left max-w-xs md:w-full`}
               >
                 <p>
-                  Padra Road, TF-18, Samanvay Status 2, Vadodara, Gujarat, IN
+                  Padra Road, TF-18, Samanvay Status 2, Vadodara, Gujarat, IN 
                 </p>
               </div>
             </div>
