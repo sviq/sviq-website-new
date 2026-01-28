@@ -1,17 +1,17 @@
-"use client";
+'use client';
 
-import { FC, useEffect, useState } from "react";
-import { motion } from "framer-motion";
-import { ArrowRight } from "lucide-react";
-import { fonts } from "@/config/fonts";
-import Link from "next/link";
+import { fonts } from '@/config/fonts';
+import { motion } from 'framer-motion';
+import { ArrowRight } from 'lucide-react';
+import Link from 'next/link';
+import { FC, useEffect, useState } from 'react';
 interface InteractiveCardProps {
   name: string;
   description: string;
   href: string;
   bgColor: string;
   textColor: string;
-  size?: "small" | "large";
+  size?: 'small' | 'large';
 }
 
 // Custom hook for media queries
@@ -20,13 +20,13 @@ export function useMediaQuery(query: string): boolean {
   const [matches, setMatches] = useState(false);
 
   useEffect(() => {
-    if (typeof window !== "undefined") {
+    if (typeof window !== 'undefined') {
       const media = window.matchMedia(query);
       setMatches(media.matches);
 
       const listener = () => setMatches(media.matches);
-      media.addEventListener("change", listener);
-      return () => media.removeEventListener("change", listener);
+      media.addEventListener('change', listener);
+      return () => media.removeEventListener('change', listener);
     }
     return undefined;
   }, [query]);
@@ -40,32 +40,30 @@ const InteractiveCard: FC<InteractiveCardProps> = ({
   href,
   bgColor,
   textColor,
-  size = "small",
+  size = 'small',
 }) => {
   // Track if the card is in active state (for mobile)
   const [isActive, setIsActive] = useState(false);
-  const isMobile = useMediaQuery("(max-width: 768px)");
+  const isMobile = useMediaQuery('(max-width: 768px)');
   const getCardState = () => {
     if (isMobile) {
-      return isActive ? "hover" : "initial";
+      return isActive ? 'hover' : 'initial';
     }
-    return "initial";
+    return 'initial';
   };
 
   return (
     <motion.div
       className={`relative w-full transform transition-all ease-out duration-300 rounded-3xl border-[4px] border-dashed overflow-hidden flex flex-col justify-between ${
-        size === "small"
-          ? "px-6 py-6 hover:py-4"
-          : "px-14 py-8 hover:py-8 hover:px-8"
+        size === 'small' ? 'px-6 py-6 hover:py-4' : 'px-14 py-8 hover:py-8 hover:px-8'
       }`}
       style={{
-        height: size === "small" ? "256px" : "380px",
+        height: size === 'small' ? '256px' : '380px',
         scale: 1,
         backgroundColor: bgColor,
         color: textColor,
         borderColor: bgColor,
-        boxShadow: "0px 0px 0px rgba(0,0,0,0)",
+        boxShadow: '0px 0px 0px rgba(0,0,0,0)',
       }}
       initial="initial"
       whileHover="hover"
@@ -77,8 +75,10 @@ const InteractiveCard: FC<InteractiveCardProps> = ({
           borderColor: bgColor,
         },
         hover: {
-          backgroundColor: "white",
-          color: "black",
+          // backgroundColor: "white",
+          // color: "black",
+          backgroundColor: 'rgb(255, 255, 255)',
+          color: 'rgb(0, 0, 0)',
           borderColor: bgColor,
           scale: 1.03,
           boxShadow: `0px 10px 20px rgba(0, 0, 0, 0.1)`,
@@ -105,32 +105,26 @@ const InteractiveCard: FC<InteractiveCardProps> = ({
       >
         <Link href={href} className="block h-full">
           {/* Text Content */}
-          <div
-            className={`flex flex-col flex-grow ${
-              size === "large" && "space-y-5"
-            }`}
-          >
+          <div className={`flex flex-col flex-grow ${size === 'large' && 'space-y-5'}`}>
             <motion.h3
               className={` ${
-                size === "small"
-                  ? fonts.bricolageGrotesque
-                  : fonts.darkerGrotesque
+                size === 'small' ? fonts.bricolageGrotesque : fonts.darkerGrotesque
               } font-semibold`}
               variants={{
                 initial: {
-                  fontSize: size === "small" ? "32px" : "76px",
-                  lineHeight: size == "small" ? "42px" : "72px",
-                  maxWidth: "100%",
-                  y: "25%",
+                  fontSize: size === 'small' ? '32px' : '76px',
+                  lineHeight: size == 'small' ? '42px' : '72px',
+                  maxWidth: '100%',
+                  y: '25%',
                   transition: {
                     duration: 0.3,
                   },
                 },
                 hover: {
-                  y: "0%",
-                  fontSize: size === "small" ? "24px" : "64px",
-                  lineHeight: size == "small" ? "32px" : "62px",
-                  maxWidth: "80%",
+                  y: '0%',
+                  fontSize: size === 'small' ? '24px' : '64px',
+                  lineHeight: size == 'small' ? '32px' : '62px',
+                  maxWidth: '80%',
                   transition: {
                     duration: 0.3,
                   },
@@ -142,20 +136,20 @@ const InteractiveCard: FC<InteractiveCardProps> = ({
 
             <motion.p
               className={`${fonts.inter} text-primaryBlack font-medium mt-3 ${
-                size === "small"
-                  ? "text-sm max-w-2xl leading-[22px] "
-                  : "text-lg max-w-3xl leading-loose"
+                size === 'small'
+                  ? 'text-sm max-w-2xl leading-[22px] '
+                  : 'text-lg max-w-3xl leading-loose'
               }`}
               variants={{
                 initial: {
                   opacity: 0,
                   y: 15,
-                  display: "none",
+                  display: 'none',
                 },
                 hover: {
                   opacity: 1,
                   y: 0,
-                  display: "block",
+                  display: 'block',
                   transition: {
                     duration: 0.3,
                     delay: 0.2,
@@ -181,7 +175,7 @@ const InteractiveCard: FC<InteractiveCardProps> = ({
               },
             }}
           >
-            <ArrowRight size={size === "small" ? 32 : 34} />
+            <ArrowRight size={size === 'small' ? 32 : 34} />
           </motion.div>
         </Link>
       </div>
@@ -193,7 +187,7 @@ const InteractiveCard: FC<InteractiveCardProps> = ({
           initial={{ opacity: 0.7 }}
           animate={{ opacity: isActive ? 0 : 0.7 }}
         >
-          {isActive ? "" : "Tap to view"}
+          {isActive ? '' : 'Tap to view'}
         </motion.div>
       )}
     </motion.div>

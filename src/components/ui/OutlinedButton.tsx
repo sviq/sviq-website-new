@@ -21,7 +21,7 @@ export const OutlinedButton = ({
   children,
   onClick,
 }: ButtonProps) => {
-  const buttonClasses = `${fonts.inter} px-6 py-3 border-2 rounded text-lg sm:text-xl transition-all transform hover:scale-105 duration-200 ease-out ${colorClasses[color]}`;
+  const buttonClasses = `${fonts.inter} mt-8 px-6 py-3 border-2 rounded text-lg sm:text-xl transition-all transform hover:scale-105 duration-200 ease-out ${colorClasses[color]}`;
 
   const buttonContent = (
     <button onClick={onClick} className={buttonClasses}>
