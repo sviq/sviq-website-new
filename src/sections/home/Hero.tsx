@@ -61,11 +61,31 @@ import HeroSection from './HomeProductBanner';
 import SafeTrackDashboardMock from '@/components/mockDashboards/SafeTrackDashboardMock';
 import LogiTrackDashboardMock from '@/components/mockDashboards/LogiTrackDashboardMock';
 
-const fadeVariants = {
-  enter: { opacity: 0, y: 30 },
-  center: { opacity: 1, y: 0, transition: { duration: 0.7, ease: 'easeOut' } },
-  exit: { opacity: 0, y: -30, transition: { duration: 0.4 } },
+type Direction = number;
+
+const slideVariants = {
+  enter: (direction: Direction) => ({
+    x: direction > 0 ? 120 : -120,
+    opacity: 0,
+  }),
+  center: {
+    x: 0,
+    opacity: 1,
+    transition: {
+      duration: 0.7,
+      ease: 'easeOut' as const,
+    },
+  },
+  exit: (direction: Direction) => ({
+    x: direction > 0 ? -120 : 120,
+    opacity: 0,
+    transition: {
+      duration: 0.5,
+      ease: 'easeIn' as const,
+    },
+  }),
 };
+
 
 const heroSlides = [
   {
@@ -144,15 +164,19 @@ const heroSlides = [
 export default function Hero() {
   const [index, setIndex] = useState(0);
   const [isPaused, setIsPaused] = useState(false);
+  const [direction, setDirection] = useState(1);
   const timeoutRef = useRef<NodeJS.Timeout | null>(null);
 
-  const nextSlide = () => {
-    setIndex((prev) => (prev + 1) % heroSlides.length);
-  };
+ const nextSlide = () => {
+   setDirection(1);
+   setIndex((prev) => (prev + 1) % heroSlides.length);
+ };
 
-  const prevSlide = () => {
-    setIndex((prev) => (prev === 0 ? heroSlides.length - 1 : prev - 1));
-  };
+ const prevSlide = () => {
+   setDirection(-1);
+   setIndex((prev) => (prev === 0 ? heroSlides.length - 1 : prev - 1));
+ };
+
 
   // Autoplay
   useEffect(() => {
@@ -180,7 +204,8 @@ export default function Hero() {
         <Container>
           <motion.div
             key={index}
-            variants={fadeVariants}
+            custom={direction}
+            variants={slideVariants}
             initial="enter"
             animate="center"
             exit="exit"

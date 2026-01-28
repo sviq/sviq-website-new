@@ -7,6 +7,8 @@ import Heading from "@/components/ui/Heading";
 import { OutlinedButton } from "@/components/ui/OutlinedButton";
 import OutlinedChip from "@/components/ui/OutlinedChip";
 import SubText from "@/components/ui/SubText";
+import type { Variants } from 'framer-motion';
+
 
 export default function About() {
   const ref = useRef(null);
@@ -17,13 +19,21 @@ export default function About() {
     visible: {
       opacity: 1,
       y: 0,
-      transition: { duration: 0.6, ease: "easeOut" },
+      transition: {
+        duration: 0.6,
+        ease: 'easeOut' as const,
+      },
     },
-  };
+  } satisfies Variants;
 
   const staggerContainer = {
-    visible: { transition: { staggerChildren: 0.2 } },
-  };
+    visible: {
+      transition: {
+        staggerChildren: 0.2,
+      },
+    },
+  } satisfies Variants;
+
 
   const whyUs = [
     {
