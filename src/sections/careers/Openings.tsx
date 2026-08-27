@@ -12,7 +12,7 @@ export const Openings = () => {
         <motion.div
           initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, ease: "easeOut" }}
+          transition={{ duration: 0.8, ease: "easeOut" as const }}
           viewport={{ once: true }}
           className="space-y-12"
         >
@@ -30,7 +30,7 @@ export const Openings = () => {
             className="bg-softCyan px-8 py-12 md:px-16 md:py-16"
             initial={{ opacity: 0, y: 24 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, ease: "easeOut", delay: 0.15 }}
+            transition={{ duration: 0.6, ease: "easeOut" as const, delay: 0.15 }}
             viewport={{ once: true }}
           >
             <div className="mx-auto max-w-2xl space-y-6 text-center">

@@ -21,14 +21,14 @@ const Story = () => {
         <motion.div
           initial={{ opacity: 0, y: 50 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.6, ease: "easeOut" }}
+          transition={{ duration: 0.6, ease: "easeOut" as const }}
           className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-0"
         >
           {/* Left section text */}
           <motion.div
             initial={{ opacity: 0, x: -50 }}
             animate={inView ? { opacity: 1, x: 0 } : {}}
-            transition={{ duration: 0.6, ease: "easeOut", delay: 0.2 }}
+            transition={{ duration: 0.6, ease: "easeOut" as const, delay: 0.2 }}
           >
             <p
               className={`${fonts.inter} text-black font-bold text-sm md:text-base`}
@@ -89,7 +89,7 @@ const Story = () => {
           <motion.div
             initial={{ opacity: 0, x: 50 }}
             animate={inView ? { opacity: 1, x: 0 } : {}}
-            transition={{ duration: 0.6, ease: "easeOut", delay: 0.4 }}
+            transition={{ duration: 0.6, ease: "easeOut" as const, delay: 0.4 }}
             className="h-full flex justify-center"
           >
             <div className="relative w-full lg:w-[75%] h-[470px]">

@@ -30,7 +30,7 @@ const Functionalities: FC<FunctionalitiesProps> = ({
       ref={ref}
       initial={{ opacity: 0, y: 50 }}
       animate={isInView ? { opacity: 1, y: 0 } : {}}
-      transition={{ duration: 0.6, ease: "easeOut" }}
+      transition={{ duration: 0.6, ease: "easeOut" as const }}
       className="bg-[#EBEAFF] flex justify-center items-center py-10 md:py-14 lg:py-20"
     >
       <Container className="space-y-10">
@@ -56,7 +56,7 @@ const Functionalities: FC<FunctionalitiesProps> = ({
                 <motion.div
                   initial={false}
                   animate={{ rotate: activeIndex === index ? 180 : 0 }}
-                  transition={{ duration: 0.2, ease: "easeInOut" }}
+                  transition={{ duration: 0.2, ease: "easeInOut" as const }}
                 >
                   <ChevronDown size={24} />
                 </motion.div>

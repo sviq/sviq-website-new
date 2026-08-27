@@ -11,7 +11,7 @@ const AboutBanner = () => {
         <motion.div
           initial={{ opacity: 0, y: 24 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, ease: "easeOut" }}
+          transition={{ duration: 0.6, ease: "easeOut" as const }}
           className="relative w-full h-[320px] md:h-[420px] lg:h-[480px] overflow-hidden"
         >
           <Image

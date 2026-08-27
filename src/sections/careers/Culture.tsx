@@ -18,7 +18,7 @@ const CultureCard: FC<CultureCardProps> = ({ emoji, title, description }) => {
     <motion.div
       initial={{ opacity: 0, y: 50 }}
       whileInView={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.6, ease: "easeOut" }}
+      transition={{ duration: 0.6, ease: "easeOut" as const }}
       viewport={{ once: true }}
       className="bg-white px-6 py-8 space-y-3"
     >
@@ -77,7 +77,7 @@ const Culture = () => {
     <motion.section
       initial={{ opacity: 0 }}
       whileInView={{ opacity: 1 }}
-      transition={{ duration: 0.8, ease: "easeOut" }}
+      transition={{ duration: 0.8, ease: "easeOut" as const }}
       viewport={{ once: true }}
       className="bg-[#FAFAFC] flex justify-center items-center py-12 md:py-14 lg:py-24"
     >
@@ -85,7 +85,7 @@ const Culture = () => {
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, ease: "easeOut" }}
+          transition={{ duration: 0.6, ease: "easeOut" as const }}
           viewport={{ once: true }}
           className="max-w-3xl space-y-5"
         >
@@ -102,7 +102,7 @@ const Culture = () => {
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5, ease: "easeOut" }}
+          transition={{ duration: 0.5, ease: "easeOut" as const }}
           viewport={{ once: true }}
           className="flex flex-wrap gap-3"
         >

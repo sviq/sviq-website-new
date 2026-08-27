@@ -42,13 +42,13 @@ const Expertise = () => {
         <motion.div
           initial={{ opacity: 0, y: 50 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.6, ease: "easeOut" }}
+          transition={{ duration: 0.6, ease: "easeOut" as const }}
           className="grid grid-cols-1 lg:grid-cols-3 gap-14 lg:gap-0"
         >
           <motion.div
             initial={{ opacity: 0, x: -50 }}
             animate={inView ? { opacity: 1, x: 0 } : {}}
-            transition={{ duration: 0.6, ease: "easeOut", delay: 0.2 }}
+            transition={{ duration: 0.6, ease: "easeOut" as const, delay: 0.2 }}
             className="col-span-1 lg:col-span-2 space-y-6"
           >
             <p className={`${fonts.inter} text-sm md:text-base font-bold`}>
@@ -75,7 +75,7 @@ const Expertise = () => {
           <motion.div
             initial={{ opacity: 0, x: 50 }}
             animate={inView ? { opacity: 1, x: 0 } : {}}
-            transition={{ duration: 0.6, ease: "easeOut", delay: 0.4 }}
+            transition={{ duration: 0.6, ease: "easeOut" as const, delay: 0.4 }}
             className="space-y-6 col-span-1 flex flex-col justify-center items-center"
           >
             {whyUs.map((item, index) => (
@@ -85,7 +85,7 @@ const Expertise = () => {
                 animate={inView ? { opacity: 1, y: 0 } : {}}
                 transition={{
                   duration: 0.5,
-                  ease: "easeOut",
+                  ease: "easeOut" as const,
                   delay: index * 0.2,
                 }}
               >

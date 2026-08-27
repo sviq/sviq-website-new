@@ -61,7 +61,7 @@ function FAQs() {
                 opacity: 1,
                 backgroundColor: activeIndex === index ? "#ffffff" : "#FFF5ED",
               }}
-              transition={{ duration: 0.3, ease: "easeInOut" }}
+              transition={{ duration: 0.3, ease: "easeInOut" as const }}
               className="p-6 md:p-10 rounded-3xl w-full cursor-pointer"
             >
               <motion.div className="flex justify-between items-center">
@@ -72,7 +72,7 @@ function FAQs() {
                 </p>
                 <motion.span
                   animate={{ rotate: activeIndex === index ? 180 : 0 }}
-                  transition={{ duration: 0.3, ease: "easeInOut" }}
+                  transition={{ duration: 0.3, ease: "easeInOut" as const }}
                   className="text-primaryBlack"
                 >
                   <ChevronDown size={28} />
@@ -84,7 +84,7 @@ function FAQs() {
                     initial={{ height: 0, opacity: 0 }}
                     animate={{ height: "auto", opacity: 1 }}
                     exit={{ height: 0, opacity: 0 }}
-                    transition={{ duration: 0.4, ease: "easeInOut" }}
+                    transition={{ duration: 0.4, ease: "easeInOut" as const }}
                     className="overflow-hidden md:max-w-[80%]"
                   >
                     <p

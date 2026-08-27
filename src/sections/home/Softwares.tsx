@@ -17,7 +17,7 @@ const Softwares = () => {
     visible: {
       opacity: 1,
       y: 0,
-      transition: { duration: 0.6, ease: "easeOut" },
+      transition: { duration: 0.6, ease: "easeOut" as const },
     },
   };
 
@@ -26,7 +26,7 @@ const Softwares = () => {
     visible: (index: number) => ({
       opacity: 1,
       scale: 1,
-      transition: { delay: index * 0.2, duration: 0.4, ease: "easeOut" },
+      transition: { delay: index * 0.2, duration: 0.4, ease: "easeOut" as const },
     }),
   };
 

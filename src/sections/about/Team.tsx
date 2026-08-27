@@ -23,7 +23,7 @@ const MemberInfo = ({ image, name, role, content }: MemberProps) => {
       ref={ref}
       initial={{ opacity: 0, y: 50 }}
       animate={isInView ? { opacity: 1, y: 0 } : {}}
-      transition={{ duration: 0.6, ease: "easeOut" }}
+      transition={{ duration: 0.6, ease: "easeOut" as const }}
       className="grid grid-cols-1 lg:grid-cols-3 gap-8"
     >
       <div className="relative w-full h-[400px] lg:h-[400px]">
@@ -49,7 +49,7 @@ const Team = () => {
         <motion.div
           initial={{ opacity: 0, y: -50 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, ease: "easeOut" }}
+          transition={{ duration: 0.6, ease: "easeOut" as const }}
           className="space-y-2 max-w-3xl"
         >
           <p className={`${fonts.inter} text-sm md:text-base font-bold`}>

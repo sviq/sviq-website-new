@@ -15,13 +15,13 @@ const containerVariants = {
   show: {
     opacity: 1,
     y: 0,
-    transition: { duration: 0.6, ease: "easeOut", staggerChildren: 0.2 },
+    transition: { duration: 0.6, ease: "easeOut" as const, staggerChildren: 0.2 },
   },
 };
 
 const itemVariants = {
   hidden: { opacity: 0, y: 10 },
-  show: { opacity: 1, y: 0, transition: { duration: 0.5, ease: "easeOut" } },
+  show: { opacity: 1, y: 0, transition: { duration: 0.5, ease: "easeOut" as const } },
 };
 
 const PageIntro: FC<PageIntroProps> = ({ pageName, title, description }) => {
