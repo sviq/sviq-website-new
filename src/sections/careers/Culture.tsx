@@ -1,8 +1,10 @@
 "use client";
 import { motion } from "framer-motion";
+import Link from "next/link";
 import Container from "@/components/ui/Container";
 import Heading from "@/components/ui/Heading";
 import { fonts } from "@/config/fonts";
+import { Products } from "@/constants";
 import { FC } from "react";
 
 interface CultureCardProps {
@@ -34,40 +36,40 @@ const CultureCard: FC<CultureCardProps> = ({ emoji, title, description }) => {
 const Culture = () => {
   const culture = [
     {
-      emoji: "⏱",
-      title: "Flexible working time",
+      emoji: "💻",
+      title: "Custom software",
       description:
-        "Set your own hours and work where you are most productive while staying aligned on outcomes.",
+        "Web, mobile, and SaaS for clients who need software designed around how they actually work — not a template.",
     },
     {
-      emoji: "🏡",
-      title: "Remote-friendly team",
+      emoji: "📦",
+      title: "Products we ship",
       description:
-        "Collaborate async-first with teammates spread across time zones and stay connected through daily standups.",
+        "Client work sits next to our own suite: Optiva, SafeTrack, Horizon, VizTrack, LogiTrack, DocuTrack, and eBMR.",
     },
     {
-      emoji: "🎉",
-      title: "Quarterly offsites",
+      emoji: "🧩",
+      title: "Both kinds of work",
       description:
-        "Gather in person several times a year to plan the roadmap, align priorities, and celebrate milestones together.",
-    },
-    {
-      emoji: "🚀",
-      title: "Startup pace",
-      description:
-        "Own big problems end-to-end, ship to customers weekly, and learn faster than you thought possible.",
-    },
-    {
-      emoji: "💡",
-      title: "Learning stipend",
-      description:
-        "Access a dedicated budget for books, courses, and conferences that keep your skills sharp.",
+        "A client build one week, a product feature the next. Same people, same standards.",
     },
     {
       emoji: "🤝",
-      title: "Direct mentorship",
+      title: "Small team, real access",
       description:
-        "Partner closely with the founding team, get feedback quickly, and help shape how we build and work together.",
+        "You sit close to the people talking to customers and shipping the product. Feedback is direct.",
+    },
+    {
+      emoji: "🚀",
+      title: "Brief to production",
+      description:
+        "You see work go live — a client build or a product feature — not a ticket that stops at a handoff.",
+    },
+    {
+      emoji: "🌱",
+      title: "Learn on live work",
+      description:
+        "Growth comes from shipping real software with a small team, not from a training programme on the side.",
     },
   ];
 
@@ -90,14 +92,35 @@ const Culture = () => {
           <p className={`${fonts.poppins} text-sm tracking-[3px]`}>
             OUR WORK & CULTURE
           </p>
-          <Heading>
-            Come and join a team of highly skilled professionals.
-          </Heading>
+          <Heading>Client work and products. Same desk.</Heading>
+          <p className={`${fonts.inter} text-base md:text-lg text-[#110C3E]`}>
+            We take on custom builds and we run our own SaaS. You will not be
+            parked on one or the other.
+          </p>
         </motion.div>
+
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5, ease: "easeOut" }}
+          viewport={{ once: true }}
+          className="flex flex-wrap gap-3"
+        >
+          {Products.map((product) => (
+            <Link
+              key={product.href}
+              href={product.href}
+              className={`${fonts.inter} text-sm md:text-base px-4 py-2 rounded-full border border-[#110C3E]/15 bg-white text-[#110C3E] hover:border-primary hover:text-primary transition-colors`}
+            >
+              {product.shortName}
+            </Link>
+          ))}
+        </motion.div>
+
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {culture.map((item, index) => (
+          {culture.map((item) => (
             <CultureCard
-              key={index}
+              key={item.title}
               emoji={item.emoji}
               title={item.title}
               description={item.description}

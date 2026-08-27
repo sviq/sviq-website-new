@@ -6,12 +6,13 @@ import Container from "@/components/ui/Container";
 import Heading from "@/components/ui/Heading";
 import { fonts } from "@/config/fonts";
 import toast from "react-hot-toast";
+import { CheckCircle2, X } from "lucide-react";
 
 interface AboutProps {
   name: string;
   about: string[];
   features: string[];
-  brochure: string;
+  brochure?: string;
 }
 
 export const About: React.FC<AboutProps> = ({
@@ -41,7 +42,7 @@ export const About: React.FC<AboutProps> = ({
       if (!res.ok)
         return toast.error("Oops! Something went wrong.", { id: toastId });
 
-      toast.success("You're all set! 🎉", { id: toastId });
+      toast.success("You're all set.", { id: toastId });
       setIsSubmitted(true);
       setEmail("");
     } catch (error) {
@@ -127,6 +128,7 @@ export const About: React.FC<AboutProps> = ({
                   </motion.p>
                 ))}
               </div>
+              {brochure ? (
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
@@ -135,6 +137,14 @@ export const About: React.FC<AboutProps> = ({
               >
                 Download Brochure
               </motion.button>
+              ) : (
+                <a
+                  href="/contact"
+                  className={`${fonts.inter} inline-block text-lg bg-white text-black py-4 px-7 rounded-md font-medium hover:bg-primary hover:text-white border border-white transition-colors duration-300 ease-in-out`}
+                >
+                  Request a demo
+                </a>
+              )}
             </motion.div>
           </motion.div>
         </motion.div>
@@ -161,7 +171,7 @@ export const About: React.FC<AboutProps> = ({
                 onClick={() => setIsModalOpen(false)}
                 className="absolute top-3 right-3 text-gray-500 hover:text-gray-700 transition-colors"
               >
-                ✖
+                <X className="size-5" strokeWidth={1.75} />
               </button>
 
               {!isSubmitted ? (
@@ -205,7 +215,10 @@ export const About: React.FC<AboutProps> = ({
                   animate={{ opacity: 1 }}
                   className={`${fonts.poppins} text-green-600 font-medium space-y-6`}
                 >
-                  <p>You're all set! 🎉 Click below to access the brochure:</p>
+                  <p className="flex items-center justify-center gap-2">
+                    <CheckCircle2 className="size-5" strokeWidth={1.75} />
+                    You&apos;re all set. Click below to access the brochure:
+                  </p>
                   <a
                     href={brochure}
                     target="_blank"

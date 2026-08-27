@@ -62,8 +62,8 @@ const InteractiveCard: FC<InteractiveCardProps> = ({
       style={{
         height: size === "small" ? "256px" : "380px",
         scale: 1,
-        backgroundColor: bgColor,
-        color: textColor,
+        backgroundColor: "#F7F6FF",
+        color: bgColor,
         borderColor: bgColor,
         boxShadow: "0px 0px 0px rgba(0,0,0,0)",
       }}
@@ -72,16 +72,16 @@ const InteractiveCard: FC<InteractiveCardProps> = ({
       animate={getCardState()}
       variants={{
         initial: {
-          backgroundColor: bgColor,
-          color: textColor,
+          backgroundColor: "#F7F6FF",
+          color: bgColor,
           borderColor: bgColor,
         },
         hover: {
-          backgroundColor: "white",
-          color: "black",
+          backgroundColor: bgColor,
+          color: "#FFFFFF",
           borderColor: bgColor,
           scale: 1.03,
-          boxShadow: `0px 10px 20px rgba(0, 0, 0, 0.1)`,
+          boxShadow: "0px 10px 24px rgba(13, 6, 58, 0.12)",
           transition: {
             duration: 0.3,
           },
@@ -141,7 +141,7 @@ const InteractiveCard: FC<InteractiveCardProps> = ({
             </motion.h3>
 
             <motion.p
-              className={`${fonts.inter} text-primaryBlack font-medium mt-3 ${
+              className={`${fonts.inter} font-medium mt-3 ${
                 size === "small"
                   ? "text-sm max-w-2xl leading-[22px] "
                   : "text-lg max-w-3xl leading-loose"

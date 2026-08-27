@@ -53,7 +53,7 @@ const Navbar = () => {
               alt={siteConfig.name}
               width={96}
               height={96}
-              className="w-full h-full object-contain"
+              className="h-auto w-full object-contain"
             />
           </Link>
 

@@ -3,9 +3,9 @@ import { Metadata } from "next";
 export const defaultSEO = {
   title: "SVIQ Solutions LLP",
   description:
-    "SVIQ is a leading IT & Engineering startup  providing innovative solutions to businesses. Our services include web design, eCommerce, digital marketing and more.",
+    "SVIQ Solutions LLP builds web applications, SaaS, mobile apps, business websites, and hosting — and ships Optiva, SafeTrack, Horizon, VizTrack, LogiTrack, DocuTrack, and eBMR.",
   Keywords:
-    "software development, custom software, enterprise solutions, CRM development, SaaS development, startup software, MVP development, business automation, digital transformation, cloud applications, AI-powered software, ERP solutions, web development, mobile app development, API integration, scalable backend, agile development, tech consulting, business software, IT services",
+    "custom software, SaaS, web applications, mobile app development, business websites, hosting, software development, EHS software, visitor management, WMS, logistics software, document management, eBMR, SafeTrack, VizTrack, LogiTrack, DocuTrack, Horizon, Optiva, Vadodara",
   image: "/images/og-image.png",
   url: "https://sviqsolutions.com",
 };

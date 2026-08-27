@@ -29,7 +29,7 @@ const Expertise = () => {
       icon: "/images/ClientCentric.svg",
       text: "Support Assist",
       subText:
-        "Get 24/7 expert support for troubleshooting, updates, and guidance to keep your IT systems running smoothly.",
+        "Implementation and support for the products we ship.",
     },
   ];
 

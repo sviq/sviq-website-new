@@ -28,14 +28,18 @@ export default function Hero() {
 
         <motion.div variants={fadeInUp} className="max-w-2xl">
           <p className={`${fonts.inter} text-white text-xl md:text-2xl`}>
-            From MVP to fully custom-made web & mobile solutions, we can turn
-            your ideas into pixels
+            From web applications and SaaS to mobile apps, business websites,
+            and hosting — plus a product suite: Optiva, SafeTrack, Horizon,
+            VizTrack, LogiTrack, DocuTrack, and eBMR.
           </p>
         </motion.div>
 
-        <motion.div variants={fadeInUp}>
+        <motion.div variants={fadeInUp} className="flex flex-wrap gap-4">
           <OutlinedButton color="white" href="/solutions">
             Discover our Solutions
+          </OutlinedButton>
+          <OutlinedButton color="white" href="/products">
+            See our products
           </OutlinedButton>
         </motion.div>
       </Container>

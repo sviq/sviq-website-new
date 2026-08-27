@@ -36,27 +36,24 @@ function Intro() {
             className={`${fonts.inter} text-[#110C3E] text-sm md:text-base space-y-3`}
           >
             <p>
-              In our approach to business at SVIQ, we're not just building
-              cutting-edge IT and engineering solutions; we're building a
-              community of innovators, problem-solvers, and collaborators. As a
-              start-up, we thrive on fresh ideas, agility, and a passion for
-              excellence. Joining our team means being part of a dynamic
-              environment where your contributions make a real impact.
+              In our approach to business at SVIQ, we&apos;re not just shipping
+              software; we&apos;re building a community of problem-solvers and
+              collaborators. As a start-up we thrive on fresh
+              ideas, agility, and a passion for excellence. Joining our team
+              means being part of a small environment where your contributions
+              make a real impact.
             </p>
             <p>
               We believe in fostering a culture of growth, creativity, and
-              inclusivity. Whether you're a seasoned professional or just
-              starting your career, SVIQ offers opportunities to learn, grow,
-              and shape your journey. With us, you'll work on exciting projects,
-              tackle challenging problems, and collaborate with a talented team
-              dedicated to making a difference - all under the able direction of
-              industry stalwarts as your mentors.
+              inclusivity. Whether you&apos;re a seasoned professional or just
+              starting your career, you&apos;ll work on custom software and on
+              products we ship — Optiva, SafeTrack, Horizon, VizTrack,
+              LogiTrack, DocuTrack, and eBMR — with mentors who have spent
+              decades in industry.
             </p>
             <p>
-              Ready to be part of a start-up that values innovation,
-              collaboration, and your unique potential? Explore our
-              opportunities and take the first step towards an inspiring career
-              at SVIQ.
+              No open roles right now. If SVIQ still sounds like the place you
+              want to build, write to us — we read every note.
             </p>
           </motion.div>
         </motion.div>

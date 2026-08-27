@@ -28,18 +28,19 @@ export default function About() {
   const whyUs = [
     {
       icon: "/images/CustomITSolutions.svg",
-      text: "Custom IT Solutions",
-      subText: "Tailored services for businesses of all sizes.",
-    },
-    {
-      icon: "/images/SkilledTeam.svg",
-      text: "Skilled Team",
-      subText: "Experts in turning your vision into reality.",
+      text: "Web, mobile & SaaS",
+      subText: "Applications built around how your team works.",
     },
     {
       icon: "/images/ClientCentric.svg",
-      text: "Client-Centric",
-      subText: "Your success is our priority.",
+      text: "Websites & hosting",
+      subText: "Business sites, and we host what we build.",
+    },
+    {
+      icon: "/images/SkilledTeam.svg",
+      text: "SaaS products",
+      subText:
+        "Optiva, SafeTrack, Horizon, VizTrack, LogiTrack, DocuTrack, eBMR.",
     },
   ];
 
@@ -66,17 +67,15 @@ export default function About() {
             >
               <SubText>
                 At SVIQ Solutions LLP, we believe the size of your vision
-                outweighs the size of your organization. Whether you're a
-                mid-sized business, a powerhouse enterprise, or somewhere in
-                between, you deserve cutting-edge IT solutions designed to
-                empower growth and innovation.
+                outweighs the size of your organization. Whether you are a
+                mid-sized business, an enterprise, or somewhere in between, you
+                deserve software that fits — a web app, a SaaS product, a
+                mobile app, or a business website.
               </SubText>
               <SubText>
-                Founded in 2021 to bridge the gap between generic services and
-                tailored excellence, we've quickly become a trusted partner for
-                businesses across industries. Backed by a passionate team of web
-                designers, developers, marketers, and project managers, we
-                transform bold ideas into reality with precision and creativity.{" "}
+                We also host what we build. And we ship our own products:
+                Optiva, SafeTrack, Horizon, VizTrack, LogiTrack, DocuTrack, and
+                eBMR.{" "}
                 <span className="font-bold">
                   Discover how we can elevate your vision
                 </span>

@@ -39,14 +39,11 @@ const Story = () => {
               <Heading>Your Trusted Partner in Business Innovation.</Heading>
               <div className="space-y-4">
                 <SubText>
-                  It is our firm belief that every business deserves access to
-                  top-notch technology solutions of the day for not just
-                  competitive edge but also a promising growth and sustainable
-                  future. Recognizing a need for personalized, high-quality IT
-                  services, SVIQ was founded in 2021 to help businesses succeed
-                  in an increasingly digital world. Since then, we've grown into
-                  a trusted IT partner for companies of all sizes from start-ups
-                  to large enterprises, across a wide range of industries.
+                  Every business deserves software that fits how they work — not
+                  a generic package, and not a one-industry-only shop. We build
+                  for companies of all sizes, across industries. Alongside that
+                  work we productised Optiva, SafeTrack, Horizon, VizTrack,
+                  LogiTrack, DocuTrack, and eBMR.
                 </SubText>
                 <SubText>
                   What sets us apart is our slew of solutions built by an adept
@@ -75,10 +72,10 @@ const Story = () => {
                   most complex ideas into reality.
                 </SubText>
                 <SubText>
-                  Whether it's designing a strong online presence, refining
-                  digital marketing strategies, or implementing advanced
-                  software solutions, we're here to help our clients succeed
-                  every step of the way.
+                  Whether it is a web application, a SaaS product, a mobile
+                  app, a business website, or hosting after launch — we stay
+                  with the work, not just a slide deck. The same is true when
+                  we roll out SafeTrack or DocuTrack on a site.
                 </SubText>
                 <SubText>
                   Partner with SVIQ Solutions, and you'll gain a dedicated ally

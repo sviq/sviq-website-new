@@ -6,8 +6,10 @@ import { ArrowRight } from "lucide-react";
 import Container from "@/components/ui/Container";
 import Heading from "@/components/ui/Heading";
 import { fonts } from "@/config/fonts";
+import { siteConfig } from "@/config/site";
 import toast from "react-hot-toast";
 import { motion } from "framer-motion";
+
 const schema = z.object({
   fullname: z.string().min(3, "Full name must be at least 3 characters."),
   email: z.string().email("Invalid email address."),
@@ -16,6 +18,21 @@ const schema = z.object({
 });
 
 type FormData = z.infer<typeof schema>;
+
+const contactBlocks = [
+  {
+    title: "Location",
+    content: siteConfig.address,
+  },
+  {
+    title: "Working Hour",
+    content: "Monday To Friday\n9:30 AM to 6:30 PM",
+  },
+  {
+    title: "Contact Us",
+    content: `${siteConfig.phoneNumber}\n${siteConfig.contactEmail}\nabhishek@sviq.co.in`,
+  },
+];
 
 export const ContactForm = () => {
   const {
@@ -77,7 +94,7 @@ export const ContactForm = () => {
           <p className={`${fonts.inter} text-sm uppercase font-bold`}>
             CONTACT US
           </p>
-          <Heading>{`Have a Question ?\nLet's Get in Touch with us 👋`}</Heading>
+          <Heading>{`Have a Question?\nLet's Get in Touch with us 👋`}</Heading>
         </motion.div>
 
         <motion.div
@@ -149,22 +166,7 @@ export const ContactForm = () => {
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.6, delay: 0.3 }}
           >
-            {[
-              {
-                title: "Location",
-                content:
-                  "Padra Road, TF-18, Samanvay Status 2, Vadodara, Gujarat, IN",
-              },
-              {
-                title: "Working Hour",
-                content: `Monday To Friday\n9:30 AM to 6:30 PM`,
-              },
-              {
-                title: "Contact Us",
-                content:
-                  "+91 95740 20156\ncontact@sviq.co.in\nabhishek@sviq.co.in",
-              },
-            ].map((item, index) => (
+            {contactBlocks.map((item, index) => (
               <motion.div
                 key={item.title}
                 initial={{ opacity: 0, x: 30 }}

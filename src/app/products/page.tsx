@@ -5,7 +5,7 @@ import ProductList from "@/sections/product/ProductList";
 export const metadata = generateSEO({
   title: "Our Products | SVIQ Solutions LLP",
   description:
-    "Building the foundation for your success with solutions that scale",
+    "Ready SaaS products from SVIQ: Optiva, SafeTrack, Horizon, VizTrack, LogiTrack, DocuTrack, and eBMR. Custom software is under Solutions.",
 });
 
 export default function ProductsPage() {

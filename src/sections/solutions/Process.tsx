@@ -85,7 +85,7 @@ const Process = () => {
     {
       title: "Deployment",
       content:
-        "We launch your solution smoothly and efficiently, ensuring optimal performance.",
+      "We launch the work — and we can host it, so you are not left finding a server on day one.",
       image: "/images/process/deployment.svg",
     },
     {

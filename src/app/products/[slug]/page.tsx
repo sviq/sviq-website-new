@@ -8,6 +8,26 @@ import Functionalities from "@/sections/product/Functionalities";
 import Image from "next/image";
 import { notFound } from "next/navigation";
 
+export function generateStaticParams() {
+  return Products.map((product) => ({
+    slug: product.href.replace("/products/", ""),
+  }));
+}
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ slug: string }>;
+}) {
+  const { slug } = await params;
+  const product = Products.find((item) => item.href === `/products/${slug}`);
+  if (!product) return generateSEO({ title: "Product | SVIQ Solutions LLP" });
+  return generateSEO({
+    title: `${product.name} | SVIQ Solutions LLP`,
+    description: product.description,
+  });
+}
+
 export default async function Product({
   params,
 }: {

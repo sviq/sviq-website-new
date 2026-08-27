@@ -42,46 +42,40 @@ const Solutions = () => {
 
   const solutions = [
     {
-      title: "Custom Software Development",
+      title: "Web applications",
       description:
-        "We craft custom software solutions designed to meet your unique business needs. Our expert team utilizes the latest technologies to develop scalable, secure, and high-performance applications.",
-      image: "/images/solutions/custom-software-development.svg",
-    },
-    {
-      title: "Business Analytics on Power BI",
-      description:
-        "Unlock the full potential of your data with our Business Analytics solutions on Power BI. We transform raw data into actionable insights, enabling smarter decision-making and enhanced business performance.",
-      image: "/images/solutions/business-analytics.svg",
-    },
-    {
-      title: "Web-based Applications",
-      description:
-        "We create secure, scalable, and high-performance web-based applications tailored to your business needs. Leveraging the latest technologies, we deliver responsive solutions that enhance user experience, optimize operations, and drive efficiency.",
+        "Browser-based tools for the way your team actually works — dashboards, workflows, and internal systems, built to your process.",
       image: "/images/solutions/web-based-applications.svg",
     },
     {
-      title: "Mobile Apps",
+      title: "SaaS applications",
       description:
-        "We craft custom software solutions designed to meet your unique business needs. Our expert team utilizes the latest technologies to develop scalable, secure, and high-performance applications.",
+        "A product your customers log into — accounts, roles, and a codebase that can grow with you.",
+      image: "/images/solutions/custom-software-development.svg",
+    },
+    {
+      title: "Mobile app development",
+      description:
+        "Mobile apps for field teams and customers, tied to the same system as the web product.",
       image: "/images/solutions/mobile-apps.svg",
     },
     {
-      title: "Online Collaboration Platforms",
+      title: "Business websites",
       description:
-        "We craft custom software solutions designed to meet your unique business needs. Our expert team utilizes the latest technologies to develop scalable, secure, and high-performance applications.",
+        "Sites for the company: clear pages, contact, and the story you want a buyer to see. Built to load well and stay easy to update.",
+      image: "/images/solutions/jot-form-development.svg",
+    },
+    {
+      title: "Hosting",
+      description:
+        "We host the applications and sites we build, so launch is not the last time you hear from us.",
       image: "/images/solutions/online-collaboration-platforms.svg",
     },
     {
-      title: "IOT",
+      title: "Business analytics on Power BI",
       description:
-        "We craft custom software solutions designed to meet your unique business needs. Our expert team utilizes the latest technologies to develop scalable, secure, and high-performance applications.",
-      image: "/images/solutions/iot.svg",
-    },
-    {
-      title: "JOT Form Development",
-      description:
-        "We craft custom software solutions designed to meet your unique business needs. Our expert team utilizes the latest technologies to develop scalable, secure, and high-performance applications.",
-      image: "/images/solutions/jot-form-development.svg",
+        "Reports and dashboards on Power BI so the numbers you already have are readable — not another spreadsheet dump.",
+      image: "/images/solutions/business-analytics.svg",
     },
   ];
 
@@ -97,7 +91,7 @@ const Solutions = () => {
           variants={{ visible: { transition: { staggerChildren: 0.2 } } }}
         >
           <motion.div variants={cardVariants}>
-            <Heading>Smart Solutions We Provide</Heading>
+            <Heading>What we build</Heading>
           </motion.div>
         </motion.div>
 

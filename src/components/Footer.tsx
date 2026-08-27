@@ -85,7 +85,8 @@ export const Footer = () => {
                 className={`${fonts.inter} text-white space-y-6 text-left max-w-xs md:w-full`}
               >
                 <p>
-                  Padra Road, TF-18, Samanvay Status 2, Vadodara, Gujarat, IN 
+                  3rd Floor, 7, Samanvay Status 2, Atladra - Padra Rd, near Banco
+                  Products, Atladara, Vadodara, Gujarat 391410 
                 </p>
               </div>
             </div>
@@ -97,7 +98,7 @@ export const Footer = () => {
           {/* Left Section */}
           <div className="space-y-8 hidden lg:flex flex-col items-start">
             <div className="flex flex-col sm:flex-row gap-4 sm:space-x-5">
-              <Link href={"#"}>
+              <Link href={"/contact"}>
                 <button
                   className={`${fonts.inter} group border border-white hover:bg-transparent hover:text-white font-medium text-lg bg-white flex justify-center items-center text-black py-3 px-6 rounded w-full sm:w-auto transition-all duration-200 ease-in-out hover:scale-105`}
                 >
@@ -120,7 +121,7 @@ export const Footer = () => {
             </div>
             <div>
               <p className={`${fonts.inter} text-sm text-white`}>
-                Established. 2021
+                Established. 2022
               </p>
             </div>
             <div>

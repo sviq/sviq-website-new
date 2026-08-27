@@ -3,14 +3,12 @@ import "./globals.css";
 import { generateSEO } from "@/lib/seo";
 import Navbar from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
-import { SpeedInsights } from "@vercel/speed-insights/next";
-import { Analytics } from "@vercel/analytics/react";
 import { Toaster } from "react-hot-toast";
 
 export const metadata: Metadata = generateSEO({
   title: "SVIQ Solutions LLP",
   description:
-    "SVIQ is a leading IT & Engineering startup  providing innovative solutions to businesses. Our services include web design, eCommerce, digital marketing and more.",
+    "SVIQ Solutions LLP builds web applications, SaaS, mobile apps, business websites, and hosting — and ships Optiva, SafeTrack, Horizon, VizTrack, LogiTrack, DocuTrack, and eBMR.",
 });
 
 export default function RootLayout({
@@ -19,10 +17,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body className="bg-white">
-        <SpeedInsights />
-        <Analytics />
+    <html lang="en" suppressHydrationWarning>
+      <body className="bg-white" suppressHydrationWarning>
         <Toaster />
         <Navbar />
         {children}

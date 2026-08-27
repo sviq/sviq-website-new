@@ -7,7 +7,7 @@ import OurSolutions from "@/sections/solutions/Solutions";
 export const metadata = generateSEO({
   title: "Our Solutions | SVIQ Solutions LLP",
   description:
-    "We deliver cutting-edge IT solutions designed to enhance efficiency, growth, and digital transformation, ensuring your business stays ahead.",
+    "Web applications, SaaS, mobile apps, business websites, and hosting — plus products: Optiva, SafeTrack, Horizon, VizTrack, LogiTrack, DocuTrack, and eBMR.",
 });
 
 export default function Solutions() {
@@ -15,8 +15,8 @@ export default function Solutions() {
     <main>
       <PageIntro
         pageName="Our Solutions"
-        title="Innovative Solutions Tailored for Your Success."
-        description="We deliver cutting-edge IT solutions designed to enhance efficiency, growth, and\ndigital transformation, ensuring your business stays ahead."
+        title="Web apps, SaaS, mobile, websites, and hosting."
+        description="We build the software your business runs on — and we can host it. Ready products sit next to this work: Optiva, SafeTrack, Horizon, VizTrack, LogiTrack, DocuTrack, and eBMR."
       />
       <Process />
       <OurSolutions />

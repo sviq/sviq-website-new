@@ -10,23 +10,27 @@ const faqs = [
   {
     question: "Do you cover end-to-end custom software development?",
     answer:
-      "Yes. SVIQ provides skilled teams to assist you with product ideation, market analysis, and UX/UI design, as well as coding, testing, release, and support of the final product. We can even help you find venture capital funding. SVIQ is a complete custom software development company.",
+      "Yes. From the brief through design, build, test, and launch. That includes web applications, SaaS, mobile apps, business websites, and hosting. We work across industries — not only manufacturing plants.",
+  },
+  {
+    question: "Do you also sell ready SaaS products?",
+    answer:
+      "Yes. Alongside custom work we ship Optiva, SafeTrack, Horizon, VizTrack, LogiTrack, DocuTrack, and eBMR. You can take one product or several under Optiva. Audit management is not listed on this site at present.",
   },
   {
     question: "How much does it cost to develop custom software?",
     answer:
-      "The cost of developing custom software varies greatly depending on the complexity of the project. We offer a free consultation to discuss your project and provide a detailed quote.",
+      "The cost of developing custom software varies greatly depending on the complexity of the project. We offer a consultation to discuss your project and provide a detailed quote.",
   },
   {
-    question:
-      "Do you provide support services after software development is complete?",
+    question: "Do you provide support after software development is complete?",
     answer:
-      "Yes. We offer a variety of support services, including bug fixes, feature enhancements, and ongoing maintenance. We can also help you scale your software as your business grows.",
+      "Yes. We offer support services including bug fixes, feature enhancements, and ongoing maintenance. We can also help you scale the software as the business grows.",
   },
   {
-    question: "What is your preferred software development methodology?",
+    question: "Where is SVIQ based?",
     answer:
-      "We use an Agile development methodology, which allows us to deliver high-quality software quickly and efficiently. We work closely with our clients to ensure that their needs are met and that the final product exceeds their expectations.",
+      "Vadodara, Gujarat. Write to contact@sviq.co.in or call +91 95740 20156.",
   },
 ];
 
