@@ -47,7 +47,7 @@ const WorkedFor = () => {
           </Heading>
         </motion.div>
 
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-10 lg:gap-14 items-center">
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8 md:gap-10 lg:gap-12 items-center">
           {Clients.map((client, index) => (
             <motion.div
               key={client.name}

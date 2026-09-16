@@ -20,4 +20,8 @@ export const Clients: Client[] = [
     name: "Karan Group",
     logo: "/images/clients/karan-group.png",
   },
+  {
+    name: "Bharat Engineers",
+    logo: "/images/clients/bharat-engineers.png",
+  },
 ];
