@@ -5,6 +5,8 @@ interface Navigation {
 
 export type { Functionality, Product } from "./products";
 export { Products } from "./products";
+export type { Client } from "./clients";
+export { Clients } from "./clients";
 
 export const navigation: Navigation[] = [
   {
